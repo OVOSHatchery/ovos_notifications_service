@@ -57,6 +57,8 @@ class NotificationsGuiAPI():
             "text": message.data.get("text", ""),
             "action": message.data.get("action", ""),
             "type": message.data.get("type", ""),
+            "style": message.data.get("style", "info"),
+            "timestamp": time.time()
         }
         if notification_message not in self.__notificationAPI_notifications_model:
             self.__notificationAPI_notifications_model.append(
